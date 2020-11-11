@@ -4,7 +4,7 @@
 main()
 {
     int number;
-    for(number=1; number<=10; number++)
+    for(number=1; number<=10; number=number+1)
     {
         printf("%d\n", number);
     }
