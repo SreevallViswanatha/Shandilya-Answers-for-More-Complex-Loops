@@ -1,0 +1,19 @@
+// WAP to calculate simple interest for 3 sets of p, n and r.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int principle, number_of_years, count;
+    float rate, simple_interest;
+    for(count=1; count<=3; count++)
+    {
+        printf("Enter the principle:");
+        scanf("%d", &principle);
+        printf("Enter the number of years:");
+        scanf("%d", &number_of_years);
+        printf("Enter the rate:");
+        scanf("%f", &rate);
+        simple_interest=principle*number_of_years*rate/100;
+        printf("The simple interest is:%.2f\n", simple_interest);
+    }
+}
