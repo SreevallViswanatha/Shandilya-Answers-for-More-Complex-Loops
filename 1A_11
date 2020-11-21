@@ -1,0 +1,11 @@
+// Print numbers from 10 to 1 using a post-decrementation operator.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int number;
+    for(number=10; number>=1; --number)
+    {
+        printf("%d\n", number);
+    }
+}
