@@ -1,0 +1,11 @@
+// WAP to print all even numbers in the range 100 to 200.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int number;
+    for(number=100; number<=200; number+=2)
+    {
+        printf("%d\n", number);
+    }
+}
