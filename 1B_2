@@ -1,0 +1,11 @@
+// WAP to print all numbers that are divisible by 3 and 5 in the range 1 to 1000.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int number;
+    for(number=15; number<=1000; number+=15)
+    {
+        printf("%d\n", number);
+    }
+}
