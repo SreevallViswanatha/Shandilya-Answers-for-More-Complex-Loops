@@ -1,0 +1,13 @@
+// WAP to accept a number and display all the numbers from 1 to that number.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int end, start=1;
+    printf("Enter a number:");
+    scanf("%d", &end);
+    for(; start<=end; start++)
+    {
+        printf("%d\n", start);
+    }
+}
