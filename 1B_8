@@ -1,0 +1,15 @@
+// WAP to accept a number and display the count of the number of its digits.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int number, number_of_digits=0;
+    printf("Enter a number:");
+    scanf("%d", &number);
+    printf("The number of digits in %d is:", number);
+    for(; number>0; number/=10)
+    {
+        number_of_digits++;
+    }
+    printf("%d", number_of_digits);
+}
