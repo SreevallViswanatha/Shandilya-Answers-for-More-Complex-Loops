@@ -1,0 +1,14 @@
+// WAP to accept a number and display the sum of numbers from 1 to the given number.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int start=1, end, sum=0;
+    printf("Enter the end:");
+    scanf("%d", &end);
+    for(; start<=end; start++)
+    {
+        sum+=start;
+    }
+    printf("The sum of the numbers from 1 to %d is:%d.", end, sum);
+}
