@@ -1,0 +1,17 @@
+// WAP to accept a number and display  the highest digit in that number.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int number, remainder, highest=0;
+    printf("Enter a number:");
+    scanf("%d", &number);
+    printf("The highest digit of %d is:", number);
+    for(; number>0; number/=10)
+    {
+        remainder=number%10;
+        if(remainder>highest)
+            highest=remainder;
+    }
+    printf("%d", highest);
+}
