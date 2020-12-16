@@ -1,0 +1,14 @@
+// WAP to find sum of all even numbers between 1 to n
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int end, sum=0, enter=2;
+    printf("Enter a number:");
+    scanf("%d", &end);
+    for(; enter<=end; enter+=2)
+    {
+        sum+=enter;
+    }
+    printf("The sum of all the even numbers from 1 to %d is:%d", end, sum);
+}
