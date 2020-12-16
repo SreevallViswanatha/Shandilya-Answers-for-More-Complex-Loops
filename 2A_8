@@ -1,0 +1,14 @@
+// WAP to display all even numbers from 1 to n
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int number, enter=2;
+    printf("Enter a number:");
+    scanf("%d", &number);
+    printf("The even numbers from 1 to %d are:\n", number);
+    for(; enter<=number; enter+=2)
+    {
+        printf("%d\n", enter);
+    }
+}
