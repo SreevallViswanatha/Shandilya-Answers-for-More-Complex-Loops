@@ -1,0 +1,16 @@
+// WAP to find and print the first and last digit of a number.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int number, first_digit;
+    printf("Enter a number:");
+    scanf("%d", &number);
+    printf("The last digit of %d is %d.\n", number, number%10);
+    printf("The first digit of %d is ", number);
+    for(; number>0; number/=10)
+    {
+        first_digit=number%10;
+    }
+    printf("%d", first_digit);
+}
