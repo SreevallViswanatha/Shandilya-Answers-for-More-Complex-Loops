@@ -1,0 +1,16 @@
+// WAP to accept a number and display the reverse of the number along with the original number.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int number, remainder;
+    printf("Enter a number:");
+    scanf("%d", &number);
+    printf("The original number is:%d.\n", number);
+    printf("The reversed number is:");
+    for(; number>0; number/=10)
+    {
+        remainder=number%10;
+        printf("%d", remainder);
+    }
+}
