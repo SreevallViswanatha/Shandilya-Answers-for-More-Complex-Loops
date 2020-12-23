@@ -1,0 +1,60 @@
+// WAP to accept a number and print it in words. Input = 103, output = one zero three.
+#include <stdio.h>
+#include <stdlib.h>
+#include<math.h>
+main()
+{
+    int number, reverse_number=0, number_of_digits;
+    printf("Enter a number:");
+    scanf("%d", &number);
+    printf("Printing %d in words:", number);
+    number_of_digits=log10(number);
+    for(; number>0; number/=10)
+    {
+        reverse_number=reverse_number*10+number%10;
+    }
+    number_of_digits=number_of_digits-((int)log10(reverse_number));
+    for(; reverse_number>0; reverse_number/=10)
+    {
+        switch(reverse_number%10)
+        {
+        case 0:
+            printf("zero ");
+            break;
+        case 1:
+            printf("one ");
+            break;
+        case 2:
+            printf("two ");
+            break;
+        case 3:
+            printf("three ");
+            break;
+        case 4:
+            printf("four ");
+            break;
+        case 5:
+            printf("five ");
+            break;
+        case 6:
+            printf("six ");
+            break;
+        case 7:
+            printf("seven ");
+            break;
+        case 8:
+            printf("eight ");
+            break;
+        case 9:
+            printf("nine ");
+            break;
+        default:
+            printf("Incorrect input.");
+            break;
+        }
+        for(; number_of_digits!=0; number_of_digits--)
+        {
+            printf("zero ");
+        }
+    }
+}
