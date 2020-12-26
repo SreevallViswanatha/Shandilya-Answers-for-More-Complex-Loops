@@ -1,0 +1,11 @@
+// WAP to print all alphabets from a to z
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int a=97;
+    for(; a<=122; a++)
+    {
+        printf("%c\n", a);
+    }
+}
