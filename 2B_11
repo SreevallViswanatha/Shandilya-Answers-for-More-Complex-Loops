@@ -1,0 +1,11 @@
+// WAP to print all the ASCII characters with their values.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int a=0;
+    for(; a<=255; a++)
+    {
+        printf("The ASCII of %c is %d.\n", a, a);
+    }
+}
