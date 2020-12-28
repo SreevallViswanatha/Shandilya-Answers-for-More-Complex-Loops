@@ -1,0 +1,17 @@
+// WAP to find power of a number.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int base, exponent, power=1;
+    printf("Enter the base:");
+    scanf("%d", &base);
+    printf("Enter the exponent:");
+    scanf("%d", &exponent);
+    printf("%d^%d=", base, exponent);
+    for(; exponent>0; exponent--)
+    {
+        power*=base;
+    }
+    printf("%d", power);
+}
