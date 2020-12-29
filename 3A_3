@@ -1,0 +1,17 @@
+// WAP to find the factors of a given number except 1 and num itself
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int number, factor=2; // We want to find all factors of a number except 1 and the number itself, so we start from 2.
+    printf("Enter a number:");
+    scanf("%d", &number);
+    printf("The factors of %d, except 1 and %d, are:", number, number); // We don't want to put this in the last because the following is a loop, so if we put this in the loop, it will get printed over and over again.
+    for(; factor<number; factor++) // Since we have already declared factor above, the first part is empty. We want to display all factors of a number except 1 and the number, so we put factor<number to test all the numbers except number. We want to test each number greater than 1, so we put factor++.
+    {
+        if(number%factor==0) // We want to see if factor is divisible by number or not.
+        {
+            printf("%d ", factor); // Factor is a factor of the number.
+        }
+    }
+}
