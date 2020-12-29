@@ -1,0 +1,16 @@
+// WAP to calculate factorial of a number.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int number;
+    long long factorial=1; // Factorial may be really long.
+    printf("Enter a number:");
+    scanf("%d", &number);
+    printf("The factorial of %d is:", number); // We don't want to print this in the last because number will become 0.
+    for(; number>0; number--)
+    {
+        factorial*=number; // We're multiply factorial by one less than number every time it runs. This continues until number=0.
+    }
+    printf("%lld", factorial);
+}
