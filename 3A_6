@@ -1,0 +1,18 @@
+// WAP to find LCM of two given numbers.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int number1, number2, LCM;
+    printf("Enter the first number:");
+    scanf("%d", &number1);
+    printf("Enter the second number:");
+    scanf("%d", &number2);
+    LCM=number2;
+    for(;;LCM++)
+    {
+        if((LCM%number1==0)&&(LCM%number2==0))
+            break;
+    }
+    printf("The LCM of %d and %d is:%d", number1, number2, LCM);
+}
