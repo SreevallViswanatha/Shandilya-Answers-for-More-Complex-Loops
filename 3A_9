@@ -1,0 +1,23 @@
+// Print all Prime numbers between start to end.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int start, end, i=2;
+    printf("Enter the start:");
+    scanf("%d", &start);
+    printf("Enter the end:");
+    scanf("%d", &end);
+    printf("The prime numbers from %d to %d are:", start, end);
+    for(; start<=end; start++)
+    {
+        for(; i<=start; i++)
+        {
+            if(start%i==0)
+                break;
+        }
+        if(i==start)
+            printf("%d ", start);
+        i=2;
+    }
+}
