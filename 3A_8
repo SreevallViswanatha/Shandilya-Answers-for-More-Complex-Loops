@@ -1,0 +1,21 @@
+// Print all Prime numbers between 1 to n.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int end, start=2, i=2;
+    printf("The start is 1. Enter the end limit:");
+    scanf("%d", &end);
+    printf("The prime numbers between 1 and %d are:", end);
+    for(; start<=end; start++)
+    {
+        for(; i<=start; i++)
+        {
+            if(start%i==0)
+                break;
+        }
+        if(i==start)
+            printf("%d ", start);
+        i=2;
+    }
+}
