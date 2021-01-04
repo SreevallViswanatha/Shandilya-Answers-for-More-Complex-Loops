@@ -1,0 +1,28 @@
+// WAP to find all perfect numbers from start to end.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int start, end, sum, factor;
+    printf("Enter the start:");
+    scanf("%d", &start);
+    printf("Enter the end:");
+    scanf("%d", &end);
+    printf("The perfect numbers from %d to %d are:", start, end);
+    for(; start<=end; start++)
+    {
+        sum=0;
+        factor=1;
+        for(; factor<start; factor++)
+        {
+            if(start%factor==0)
+            {
+                sum+=factor;
+            }
+        }
+        if(sum==start)
+        {
+            printf("%d ", start);
+        }
+    }
+}
