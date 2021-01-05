@@ -1,0 +1,34 @@
+// WAP to find all STRONG numbers from 1 to n.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int start=1, end, sum, s, factorial, last_digit;
+    printf("Enter the end limit:");
+    scanf("%d", &end);
+    printf("The strong numbers from 1 to %d are:", end);
+    for(; start<=end; start++)
+    {
+        sum=0;
+        s=start;
+        for(; s>0; s/=10)
+        {
+            factorial=1;
+            last_digit=s%10;
+            if((last_digit==0)||(last_digit==1))
+            {
+                sum+=factorial;
+                continue;
+            }
+            for(; last_digit>0; last_digit--)
+            {
+                factorial*=last_digit;
+            }
+            sum+=factorial;
+        }
+        if(sum==start)
+        {
+            printf("%d ", start);
+        }
+    }
+}
