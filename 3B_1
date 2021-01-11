@@ -1,0 +1,17 @@
+// WAP to print Fibonacci series up to n terms.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int number, fibonacci=1, j=1, sum=0;
+    printf("Until what term should the Fibonacci series go:");
+    scanf("%d", &number);
+    printf("The Fibonacci series from term 1 to term %d are:", number);
+    for(; number>0; number--)
+    {
+        printf("%d ", sum); // First outputs a Fibonacci value.
+        fibonacci=j; // Storing the previous value of j into fibonacci
+        j=sum; // Storing the value of sum into j
+        sum=j+fibonacci; // Adding j and fibonacci together
+    }
+}
