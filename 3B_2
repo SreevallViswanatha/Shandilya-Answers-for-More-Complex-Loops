@@ -1,0 +1,37 @@
+// WAP to find one’s complement of a binary number. It should be 8 bit only otherwise display upto 8
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+main()
+{
+    int length, i;
+    char binary[10], j;
+    printf("Enter a binary number:");
+    scanf("%s", binary);
+    length=strlen(binary); // To see if the binary number is less than or equal to 8
+    if(length>8)
+    {
+        printf("Invalid. Up to 8-bit only.");
+        exit(0);
+    }
+    i=length; // We still need the value of length, although we can reuse length
+    length=0;
+    printf("The one's complement of %s is:", binary);
+    for(; length<i; length++) // If the value of the first character in the binary is 1 put the opposite. Same thing if 0. If it is neither one nor 0, the number is invalid. Print j
+    {
+        if(binary[length]=='0')
+        {
+            j='1';
+        }
+        else if(binary[length]=='1')
+        {
+            j='0';
+        }
+        else
+        {
+            printf("Invalid number entered.");
+            exit(0);
+        }
+        printf("%c", j);
+    }
+}
