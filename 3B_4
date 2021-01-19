@@ -1,0 +1,18 @@
+// WAP to convert Decimal to Binary number system.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    unsigned int binary=0, place=1;
+    int decimal, remainder;
+    printf("Enter a decimal number:");
+    scanf("%d", &decimal);
+    printf("Converting %d to binary:", decimal);
+    for(; decimal>0; decimal/=2) // Standard algorithm for conversion of bases
+    {
+        remainder=decimal%2;
+        binary+=place*remainder;
+        place*=10;
+    }
+    printf("%u", binary);
+}
