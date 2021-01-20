@@ -1,0 +1,35 @@
+// WAP to convert Binary to Octal number system.
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+#include<math.h>
+main()
+{
+    char binary[1000];
+    int decimal=0, power=0, length, octal=0;
+    printf("Enter a binary number:");
+    scanf("%s", binary);
+    printf("Converting %s to octal:", binary);
+    length=strlen(binary)-1;
+    for(; length>=0; length--)
+    {
+        if(binary[length]=='1')
+        {
+            decimal+=pow(2, power);
+        }
+        else if(!((binary[length]=='1')||(binary[length]=='0')))
+        {
+            printf("Invalid binary number.");
+            exit(0);
+        }
+        power++;
+    }
+    power=1;
+    for(; decimal>0; decimal/=8)
+    {
+        length=decimal%8;
+        octal+=power*length;
+        power*=10;
+    }
+    printf("%d", octal);
+}
