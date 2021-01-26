@@ -1,0 +1,29 @@
+// WAP to convert Octal to Hexadecimal number system.
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+main()
+{
+    char hexadecimal[100], hexadecimal_values[16]={'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+    long long octal, decimal=0, place=1;
+    int remainder;
+    printf("Enter an octal number:");
+    scanf("%lld", &octal);
+    printf("Converting %lld to hexadecimal:", octal);
+    for(; octal>0; octal/=10) // We first convert octal to decimal, then decimal to hexadecimal.
+    {
+        remainder=octal%10;
+        decimal+=place*remainder;
+        place*=8;
+    }
+    place=0;
+    for(; decimal>0; decimal/=16)
+    {
+        remainder=decimal%16;
+        hexadecimal[place]=hexadecimal_values[remainder];
+        place++;
+    }
+    hexadecimal[place]='\0';
+    strrev(hexadecimal);
+    printf("%s", hexadecimal);
+}
