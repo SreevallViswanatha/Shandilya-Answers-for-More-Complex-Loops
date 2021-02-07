@@ -1,0 +1,25 @@
+// WAP to enter numbers till the user wants. At the end it should display the count of positive, negative and zeroes entered.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int positive=0, negative=0, zero=0;
+    char c='\0';
+    for(;;)
+    {
+        printf("Enter a number. If you wants to stop, press capital S:");
+        scanf("%c", &c);
+        if(c=='S')
+            break;
+        else if(c==45)
+            negative++;
+        else if(c==48)
+            zero++;
+        else if((c>=49)&&(c<=57))
+            positive++;
+        else
+            printf("Invalid input.\n");
+        c=fflush(stdin);
+    }
+    printf("There are %d zeros, %d negatives, and %d positives.", zero, negative, positive);
+}
