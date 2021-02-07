@@ -1,0 +1,17 @@
+// WAP to receive an integer and find its octal equivalent.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int decimal, octal=0, place=1, remainder;
+    printf("Enter a number:");
+    scanf("%d", &decimal);
+    printf("Converting %d to octal:", decimal);
+    for(; decimal>0; decimal/=8)
+    {
+        remainder=decimal%8;
+        octal+=place*remainder;
+        place*=10;
+    }
+    printf("%d", octal);
+}
