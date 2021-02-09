@@ -1,0 +1,38 @@
+// Print pascal triangle for n rows.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int rows, i=0, j=0, k, l, n;
+    long long factorialk, factoriall, factorialkl, fina;
+    printf("Input the number of rows:");
+    scanf("%d", &rows);
+    for(; i<rows; i++) // Tells the computer how many rows to print.
+    {
+        for(; j<=i; j++) // Calculates factorial for each of j, k, and n, and uses the combination formula.
+        {
+            factorialk=1;
+            factoriall=1;
+            factorialkl=1;
+            k=i;
+            l=j;
+            n=k-l;
+            for(; k>0; k--)
+            {
+                factorialk*=k;
+            }
+            for(; l>0; l--)
+            {
+                factoriall*=l;
+            }
+            for(; n>0; n--)
+            {
+                factorialkl*=n;
+            }
+            fina=(factorialk)/((factoriall)*(factorialkl));
+            printf("%lld ", fina);
+        }
+        printf("\n"); // To skip a line.
+        j=0;
+    }
+}
