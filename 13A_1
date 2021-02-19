@@ -1,0 +1,25 @@
+// Write a program in C to make such a pattern like a pyramid with numbers increased by 1.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int spaces=60, rows, i=1, j, k=1, s;
+    printf("Enter the number of rows:");
+    scanf("%d", &rows);
+    for(; i<=rows; i++)
+    {
+        j=i;
+        s=spaces;
+        for(; s>0; s--)
+        {
+            printf(" ");
+        }
+        for(; j>0; j--)
+        {
+            printf("%d ", k);
+            k++;
+        }
+        printf("\n");
+        spaces--;
+    }
+}
