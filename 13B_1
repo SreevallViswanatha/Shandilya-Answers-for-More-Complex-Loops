@@ -1,0 +1,24 @@
+// Write a program in C to make such a pattern like a pyramid with an asterisk.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int i=1, j, rows, spaces=60, s;
+    printf("Enter the number of rows:");
+    scanf("%d", &rows);
+    for(; i<=rows; i++)
+    {
+        j=i; // To tell how many asteriks there are in a row
+        s=spaces; // To tell how many spaces should be given.
+        for(; s>0; s--)
+        {
+            printf(" ");
+        }
+        for(; j>0; j--)
+        {
+            printf("* ");
+        }
+        printf("\n");
+        spaces--;
+    }
+}
