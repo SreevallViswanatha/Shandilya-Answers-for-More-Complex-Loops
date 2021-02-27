@@ -1,0 +1,23 @@
+// WAP to take numbers until user enters 0 and display the average of those numbers.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    printf("To stop entering, press 0.\n");
+    int numbers=0, number;
+    float sum=0.0;
+    for(;;)
+    {
+        printf("Enter a number:");
+        scanf("%d", &number);
+        if(number==0)
+            break;
+        else
+        {
+            sum+=number;
+            numbers++;
+        }
+    }
+    sum/=numbers;
+    printf("The average of the %d numbers, except 0, you have entered is:%f", numbers, sum);
+}
