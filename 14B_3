@@ -1,0 +1,15 @@
+// WAP to accept a number and display the smallest factor of that number other than 1.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int factor=2, number;
+    printf("Enter a number:");
+    scanf("%d", &number);
+    for(; factor<=number; factor++)
+    {
+        if(number%factor==0)
+            break;
+    }
+    printf("The smallest number which is a factor of %d except 1 is:%d", number, factor);
+}
