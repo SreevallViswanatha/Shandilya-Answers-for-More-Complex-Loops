@@ -1,0 +1,42 @@
+// Write a program in C to print the Floyd's Triangle.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int i=1, j, rows;
+    printf("Enter the number of rows:");
+    scanf("%d", &rows);
+    for(; i<=rows; i++)
+    {
+        j=1;
+        if(i%2==0)
+        {
+            for(; j<=i; j++)
+            {
+                if(j%2==0)
+                {
+                    printf("1 ");
+                }
+                else
+                {
+                    printf("0 ");
+                }
+            }
+        }
+        else
+        {
+            for(; j<=i; j++)
+            {
+                if(j%2==0)
+                {
+                    printf("0 ");
+                }
+                else
+                {
+                    printf("1 ");
+                }
+            }
+        }
+        printf("\n");
+    }
+}1
