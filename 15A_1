@@ -1,0 +1,13 @@
+// WAP to display the following depending on the number of rows the user enters: 1    1 1 1 12 2 2 2 2 3 3 3 3 34 4 4 4 4 5 5 5 5 5
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int rows, i=1;
+    printf("Enter the number of rows:");
+    scanf("%d", &rows);
+    for(; i<=rows; i++)
+    {
+            printf("%d %d %d %d %d\n", i, i, i, i, i);
+    }
+}
