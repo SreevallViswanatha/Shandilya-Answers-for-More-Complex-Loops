@@ -1,0 +1,13 @@
+// WAP to accept the number of rows and print “1, 2, 3, 4, 5” in each row.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int rows;
+    printf("Enter the number of rows:");
+    scanf("%d", &rows);
+    for(; rows>0; rows--)
+    {
+        printf("1, 2, 3, 4, 5\n");
+    }
+}
