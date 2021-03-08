@@ -1,0 +1,7 @@
+// WAP to display the following: 0 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 0
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    printf("0 0 0 0 1\n0 0 0 1 0\n0 0 1 0 0\n0 1 0 0 0\n1 0 0 0 0");
+}
