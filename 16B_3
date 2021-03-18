@@ -1,0 +1,28 @@
+// WAP to accept 10 characters from user and display how many of them are uppercase letters.
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+main()
+{
+    char str[11];
+    int i, uppercase=1;
+    printf("Enter any string with 10 characters:");
+    scanf("%s", str);
+    i=strlen(str);
+    if(i!=10)
+    {
+        printf("Invalid string");
+        exit(0);
+    }
+    else
+    {
+        for(; i>0; i--)
+        {
+            if((str[i]>=65)&&(str[i]<=90))
+            {
+                uppercase++;
+            }
+        }
+        printf("The number of uppercase letters in %s is:%d", str, uppercase);
+    }
+}
