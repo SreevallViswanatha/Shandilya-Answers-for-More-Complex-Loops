@@ -1,0 +1,22 @@
+// WAP to accept a number and display single-digit sum.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int number, sum;
+    printf("Enter a number:");
+    scanf("%d", &number);
+    printf("The single-digit sum of %d is:", number);
+    for(;;)
+    {
+        sum=0;
+        for(; number>0; number/=10)
+        {
+            sum+=number%10; // Find the sum of the digits of the number.
+        }
+        if(sum<10) // See if the number is single-digit or not.
+            break;
+        number=sum;
+    }
+    printf("%d", sum);
+}
