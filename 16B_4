@@ -1,0 +1,41 @@
+// WAP to accept password which is of 6 letters and check whether it is a valid password. Valid password must contain at least one digit and one special character.
+#include <stdio.h>
+#include <stdlib.h>
+#include<string.h>
+main()
+{
+    char password[7];
+    int i;
+    printf("Enter a password of 6 characters:");
+    scanf("%s", password);
+    i=strlen(password);
+    if(i!=6)
+    {
+        printf("Invalid password. Please enter password of six letters.");
+        exit(0);
+    }
+    i--;
+    for(; i>=0; i--)
+    {
+        if((password[i]>=48)&&(password[i]<=57))
+            break;
+    }
+    if(i==-1)
+    {
+        printf("Invalid password.");
+        exit(0);
+    }
+    i=5;
+    for(; i>=0; i--)
+    {
+        if(((password[i]>=0)&&(password[i]<=47))||((password[i]>=58)&&(password[i]<=64))||((password[i]>=91)&&(password[i]<=96))||((password[i]>=123)&&(password[i]<=127)))
+        {
+            printf("The password is valid.");
+            break;
+        }
+    }
+    if(i==-1)
+    {
+        printf("Invalid password");
+    }
+}
