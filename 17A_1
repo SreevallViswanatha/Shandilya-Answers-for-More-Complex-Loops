@@ -1,0 +1,11 @@
+// Write a program to fill the entire screen with a smiling face. The smiling face has ASCII values 1.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int i=1, j=100000;
+    for(; j>0; j--)
+    {
+        printf("%c ", i);
+    }
+}
