@@ -3,9 +3,9 @@
 #include <stdlib.h>
 main()
 {
-    int i=1, j=100000;
+    int i=1, j=100000; // j is that big to fill entire screen
     for(; j>0; j--)
     {
-        printf("%c ", i);
+        printf("%c ", i); // Keep printing smiley faces until j runs out.
     }
 }
