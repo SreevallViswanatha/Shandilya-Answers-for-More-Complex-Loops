@@ -1,0 +1,17 @@
+// 	Write a program to add the first seven terms of the following series: 1/1!+2/2!+3/3!+... using a for loop.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    float number=1.0, factorial=1.0, n, sum=0.0;
+    for(; number<=7.0; number++) // Iterating the loop 7 times
+    {
+        n=number;
+        for(; n>0; n--)
+        {
+            factorial*=n; // Finding the factorial of 1, 2, 3, ... until 7
+        }
+        sum+=(number/factorial); // Doing n/n! and adding to sum
+    }
+    printf("%f", sum);
+}
