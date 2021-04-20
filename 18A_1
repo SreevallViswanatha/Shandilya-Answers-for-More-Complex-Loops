@@ -1,0 +1,27 @@
+// 	When interest compounds q times per year at an annual rate of r% for n years, the principal p compounds to an amount a as per the following formula: a=p(1+r/q)nq. Write a program to read 10 sets of p, r, n, and q and calculate the corresponding a.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    float principal_amount, rate, times_per_year, final_amount, number_of_years, n;
+    int i=10;
+    for(; i>0; i--)
+    {
+        final_amount=1;
+        printf("Enter the rate:");
+        scanf("%f", &rate);
+        printf("Enter the principal amount:");
+        scanf("%f", &principal_amount);
+        printf("Enter the number of times the interest is compounded annually:");
+        scanf("%f", &times_per_year);
+        printf("Enter the number of years:");
+        scanf("%f", &number_of_years);
+        n=number_of_years+times_per_year;
+        for(; n>1; n--)
+        {
+            final_amount*=(1+(rate/times_per_year));
+        }
+        final_amount*=principal_amount;
+        printf("The final amount is:%f\n", final_amount);
+    }
+}
