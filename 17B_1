@@ -1,0 +1,13 @@
+// Write a program to print the multiplication table of the number entered by the user. For example, if the user enters 29, the table should get displayed like this: 29*1=29  29*2=58 …
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int number, i=1;
+    printf("Enter a number:");
+    scanf("%d", &number);
+    for(;i<=9; i++)
+    {
+        printf("%d*%d=%d\n", number, i, number*i);
+    }
+}
