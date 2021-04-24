@@ -1,0 +1,7 @@
+// WAP to produce the following output:
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    printf("A B C D E F E D C B A\nA B C D E   E D C B A\nA B C D       D C B A\nA B C           C B A\nA B               B A\nA                   A");
+}
