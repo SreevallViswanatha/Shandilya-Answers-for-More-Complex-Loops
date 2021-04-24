@@ -1,0 +1,18 @@
+// WAP to print 24 hours of the day with suitable suffixes like AM, PM, Noon, and Midnight.
+#include <stdio.h>
+#include <stdlib.h>
+main()
+{
+    int hour;
+    for(hour=0; hour<=23; hour++)
+    {
+        if(hour==0)
+            printf("Midnight\n");
+        else if(hour<12)
+            printf("%d AM\n", hour);
+        else if(hour==12)
+            printf("Noon\n");
+        else
+            printf("%d PM\n", hour-12);
+    }
+}
